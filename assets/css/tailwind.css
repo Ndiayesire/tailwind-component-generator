@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    /* Primary Colors: Green */
+    --primary-50: 240, 253, 244; /* Lightest Green */
+    --primary-100: 220, 252, 231;
+    --primary-200: 187, 247, 208;
+    --primary-300: 134, 239, 172;
+    --primary-400: 74, 222, 128;
+    --primary-500: 34, 197, 94;  /* Base Green */
+    --primary-600: 22, 163, 74;
+    --primary-700: 21, 128, 61;
+    --primary-800: 22, 101, 52;
+    --primary-900: 20, 83, 45;
+    --primary-950: 13, 64, 35;  /* Darkest Green */
+    
+  
+    /* Surface Colors: Slate */
+    --surface-0: 248, 250, 252;  /* rgb(248, 250, 252) */
+    --surface-50: 241, 245, 249;
+    --surface-100: 226, 232, 240;
+    --surface-200: 203, 213, 225;
+    --surface-300: 148, 163, 184;
+    --surface-400: 100, 116, 139;
+    --surface-500: 71, 85, 105; /* Base Slate */
+    --surface-600: 51, 65, 85;
+    --surface-700: 30, 41, 59;
+    --surface-800: 15, 23, 42;
+    --surface-900: 2, 6, 23;
+    --surface-950: 0, 1, 14;
+  }
+  
