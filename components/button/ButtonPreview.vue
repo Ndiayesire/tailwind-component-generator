@@ -16,19 +16,18 @@
     <div
       class="justify-center items-center flex flex-col mx-auto border-l w-full bg-gray-100"
     >
-      <h1 class="absolute top-20 italic text-3xl text-gray-700">Component Previewer</h1>
-      <Button
-        :label="buttonText"
-        :style="{
-          width: width + 'rem',
-          height: height + 'rem',
-          backgroundColor: '#' + textHEX,
-          color: '#' + backgroundHEX,
-          borderRadius: roundedCorners ? '12px' : '0',
-          fontWeight: boldText ? 'bold' : 'normal',
-          textTransform: uppercaseText ? 'uppercase' : 'none',
-        }"
-      />
+      <button
+        :class="[
+          'px-4 py-2',
+          `w-[${width}rem] h-[${height}rem]`,
+          `bg-[#${textHEX}] text-[#${backgroundHEX}]`,
+          roundedCorners ? 'rounded-[12px]' : 'rounded-none',
+          boldText ? 'font-bold' : 'font-normal',
+          uppercaseText ? 'uppercase' : 'normal-case',
+        ]"
+      >
+        {{ buttonText }}
+      </button>
     </div>
   </div>
 </template>
@@ -36,8 +35,8 @@
 <script setup>
 import { ref, watch } from "vue";
 
-const width = ref();
-const height = ref();
+const width = ref(10);
+const height = ref(3);
 const textHEX = ref("34b08d");
 const backgroundHEX = ref("34b08d");
 const buttonText = ref("Entrer votre texte...");

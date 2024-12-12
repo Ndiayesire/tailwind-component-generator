@@ -29,6 +29,17 @@
         <Slider class="w-full" v-model="height" @input="updateSettings" />
       </div>
     </div>
+    <div class="flex flex-col gap-2 mt-5 font-medium">
+      <div class="flex gap-2 items-center mb-2">
+        <label class="text-gray-800 text-sm">Font Size</label>
+        <div
+          class="bg-gray-50 rounded-full w-7 h-7 items-center justify-center flex text-sm border"
+        >
+          {{ width }}
+        </div>
+      </div>
+      <Slider class="w-full" v-model="width" @input="updateSettings" />
+    </div>
 
     <div class="mb-5 mt-5">
       <h2 class="text-md font-semibold text-gray-800">Settings</h2>
@@ -57,7 +68,7 @@
         v-model="textHEX"
         inputId="cp-hex"
         format="hex"
-        class="mb-4 border rounded-lg"
+        class="mb-2 border rounded-lg"
       />
       <div
         class="bg-gray-50 rounded-full w-20 h-7 border items-center text-sm justify-center flex"
@@ -84,13 +95,31 @@
       </div>
     </div>
 
+    <div class="mb-2">
+      <h2 class="text-md font-semibold text-gray-800">Border</h2>
+    </div>
+
+    <div class="flex gap-2">
+      <ColorPicker
+        v-model="backgroundHEX"
+        inputId="cp-hex"
+        format="hex"
+        class="mb-4 border rounded-lg"
+      />
+      <div
+        class="bg-gray-50 rounded-full w-20 h-7 border items-center text-sm justify-center flex"
+      >
+        #{{ backgroundHEX }}
+      </div>
+    </div>
+
     <div class="mb-2 mt-2">
       <h2 class="text-md font-semibold text-gray-800">Content</h2>
     </div>
 
     <div class="w-full">
       <InputText
-        class="text-xs w-[17rem] h-[2.4rem]"
+        class="text-sm w-[17rem] h-[2.4rem]"
         type="text"
         v-model="buttonText"
         placeholder="Entrer votre texte ici..."
