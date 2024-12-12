@@ -16,11 +16,10 @@
     </ul>
     <div class="flex flex-col justify-center items-center gap-8">
       <p class="text-white text-2xl">
-        <span class="waving-hand text-3xl">👋</span> Hello let's start generating
-        components
+        <span class="waving-hand text-3xl">👋</span> Hello let's stay tuned
       </p>
-      <h1 class="text-8xl text-white text-center font-bold">
-        Tailwind Components <br />Become Easy !
+      <h1 class="text-8xl text-white font-bold text-center">
+        This Feature is<br />Coming soon !
       </h1>
       <div class="mt-3">
         <NuxtLink to="/Components">

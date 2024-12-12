@@ -1,208 +1,32 @@
-<script setup></script>
+<script setup>
+const search = ref("");
+</script>
 <template>
-  <div
-    class="bg-[url('/bg.jpeg')] h-[55rem] w-full bg-cover items-center flex flex-col mx-auto justify-center"
-  >
-    <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <div class="flex flex-col justify-center items-center gap-8">
-      <p class="text-white text-2xl">
-        <span class="waving-hand text-3xl">👋</span> Hello let's start generating
-        components
+  <div class="flex flex-col h-screen w-full p-8">
+    <div class="flex flex-col justify-center items-center mt-5">
+      <h1
+        class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#8aeec9]"
+      >
+        Tailwind Generator
+      </h1>
+      <p
+        class="text-2xl mt-5 w-[47rem] text-center text-gray-600 tracking-normal leading-10"
+      >
+        Collection of useful tools and generators for Tailwind to create, design and
+        customize all kind of web components using a graphical editor.
       </p>
-      <h1 class="text-8xl text-white font-bold">Tailwind Component <br />Become Easy</h1>
-      <div class="mt-3">
-        <BUtton label="Browser components" />
-      </div>
     </div>
+
+    <div class="flex justify-center items-center space-x-4 mt-10">
+      <IconField>
+        <InputIcon class="pi pi-search" />
+        <InputText
+          v-model="search"
+          placeholder="Search a component..."
+          class="w-[50rem] text-xs"
+        />
+      </IconField>
+    </div>
+    <ListComponents :searchQuery="search" />
   </div>
 </template>
-
-<style scoped>
-/*Start Animations*/
-@-webkit-keyframes animatetop {
-  from {
-    top: -200px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(-15deg);
-  }
-  40% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(-10deg);
-  }
-  80% {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.waving-hand {
-  display: inline-block;
-  animation: wave 1.5s infinite;
-  transform-origin: 70% 70%;
-}
-
-.circles {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 96%;
-  overflow: hidden;
-}
-
-.circles li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  animation: animate 25s linear infinite;
-  bottom: -150px;
-}
-
-.circles li:nth-child(1) {
-  left: 25%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-
-.circles li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4) {
-  left: 40%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-
-.circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6) {
-  left: 75%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7) {
-  left: 35%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10) {
-  left: 85%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-
-@keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
-}
-</style>

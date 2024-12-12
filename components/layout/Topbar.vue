@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex items-center justify-between bg-white text-back w-full h-[4rem] border-b px-4 py-2.5"
+    class="flex items-center justify-between bg-white text-back w-full h-[4rem] px-4 py-2.5 border-b"
   >
     <div class="flex items-center gap-2 text-lg">
-      <img src="/post.png" alt="Logo" class="h-4" />
-      <span class="text-semibold text-xl text-gray-600"
+      <img src="/dev.png" alt="Logo" class="h-[6rem]" />
+      <span class="text-semibold text-md font-semibold text-gray-600"
         >Tailwind Component Generator</span
       >
     </div>
@@ -16,15 +16,15 @@
         </li>
         <li class="flex items-center gap-2">
           <i class="pi pi-th-large"></i>
-          <NuxtLink to="/Components" class="text-gray-600 font-semibold"
-            >Components</NuxtLink
-          >
+          <NuxtLink to="/Components" class="text-gray-600 font-semibold">
+            Components
+          </NuxtLink>
         </li>
         <li class="flex items-center gap-2">
           <i class="pi pi-palette"></i>
-          <NuxtLink to="/ButtonPreview" class="text-gray-600 font-semibold"
-            >Forms Builder</NuxtLink
-          >
+          <NuxtLink to="/ComingSoon" class="text-gray-600 font-semibold">
+            Forms Builder
+          </NuxtLink>
         </li>
       </ul>
     </div>
