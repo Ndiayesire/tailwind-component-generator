@@ -1,6 +1,29 @@
 <script setup>
 import { ref } from "vue";
 
+const widthMapping = {
+  16: "4rem",
+  24: "6rem",
+  32: "8rem",
+  40: "10rem",
+  48: "12rem",
+  64: "16rem",
+  80: "20rem",
+  96: "24rem",
+};
+
+const heightMapping = {
+  4: "1rem",
+  8: "2rem",
+  16: "4rem",
+  24: "6rem",
+  32: "8rem",
+  40: "10rem",
+  48: "12rem",
+  64: "16rem",
+  96: "24rem",
+};
+
 const isFocused = ref(false);
 
 const props = defineProps({
@@ -31,11 +54,11 @@ const props = defineProps({
         `w-${width}`,
         `h-${height}`,
         boldText ? 'font-bold' : 'font-normal',
-        roundedCorners ? 'rounded-[10px]' : 'rounded-none',
+        roundedCorners ? 'rounded-lg' : 'rounded-none',
         `bg-[${backgroundHEX}]`,
         `text-[${textHEX}]`,
         `border-[${borderHex}]`,
-        `text-[${font}px]`,
+        `text-${font}`,
         'focus:outline-none',
         'focus:ring-1',
         focusHEX ? `focus:ring-${focusHEX}` : 'focus:ring-red-500',
@@ -45,9 +68,8 @@ const props = defineProps({
         backgroundColor: backgroundHEX,
         color: textHEX,
         border: `1px solid ${borderHex}`,
-        width: `${width}rem`,
-        height: `${height}rem`,
-        fontSize: `${font}px`,
+        width: widthMapping[width],
+        height: heightMapping[height],
         outline: isFocused ? `1px solid ${focusHEX}` : 'none',
         boxShadow: isFocused ? `0 0 0 2px ${focusHEX}` : 'none',
       }"

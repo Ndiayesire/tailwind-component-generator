@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  mode: 'jit',
+  darkMode : false,
+  mode: 'jit', // Optional, can be removed if using Tailwind 3.0 or later
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -36,9 +37,9 @@ export default {
         'surface-700': 'rgb(var(--surface-700))',
         'surface-800': 'rgb(var(--surface-800))',
         'surface-900': 'rgb(var(--surface-900))',
-        'surface-950': 'rgb(var(--surface-950))'
+        'surface-950': 'rgb(var(--surface-950))',
       },
-       width: {
+      width: {
         16: '4rem',
         24: '6rem',
         32: '8rem',
@@ -47,6 +48,7 @@ export default {
         64: '16rem',
         80: '20rem',
         96: '24rem',
+        full: '100%',
       },
       height: {
         4: '1rem',
@@ -57,9 +59,9 @@ export default {
         48: '12rem',
         64: '16rem',
         96: '24rem',
+        full: '100%',
       },
     },
   },
   plugins: [],
-}
-
+};

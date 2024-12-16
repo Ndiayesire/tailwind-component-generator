@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full h-screen">
+  <div class="flex w-full min-h-screen">
     <ButtonLayoutSettingSidebar />
   </div>
 </template>

@@ -33,7 +33,7 @@ onMounted(() => {
     v-if="isVisible"
     class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50"
   >
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-[80rem]">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-7xl">
       <!-- Modal Header -->
       <div class="flex justify-between items-center mb-4">
         <h3 class="text-lg font-semibold text-gray-600">Tailwind CSS + HTML</h3>

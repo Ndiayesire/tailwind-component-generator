@@ -26,19 +26,19 @@ const showModal = ref(false);
 const exportCode = computed(() => {
   if (props.type === "button") {
     const buttonClasses = [
-      "px-4 py-2",
+      props.boldText ? "font-bold" : "font-normal",
+      props.roundedCorners ? "rounded-lg" : "rounded-none",
+      `text-${props.font}`,
       props.width ? `w-${props.width}` : "",
       props.height ? `h-${props.height}` : "",
-      props.roundedCorners ? "rounded-[10px]" : "rounded-none",
-      props.boldText ? "font-bold" : "font-normal",
+      `bg-[${props.backgroundHEX}]`,
+      `text-[${props.textHEX}]`,
       props.uppercaseText ? "uppercase" : "normal-case",
       props.shadow ? "shadow-xl" : "",
       "border",
-      `bg-[${props.backgroundHEX}]`,
       `hover:bg-[${props.hoverHEX}]`,
-      `text-[${props.textHEX}]`,
       `border-[${props.borderHex}]`,
-      `text-[${props.font}px]`,
+      "justify-center",
     ].join(" ");
 
     return `<button class="${buttonClasses}">${props.buttonText}</button>`;
@@ -48,12 +48,12 @@ const exportCode = computed(() => {
       "border",
       props.width ? `w-${props.width}` : "",
       props.height ? `h-${props.height}` : "",
-      props.roundedCorners ? "rounded-[10px]" : "rounded-none",
+      props.roundedCorners ? "rounded-lg" : "rounded-none",
       props.boldText ? "font-bold" : "font-normal",
       `bg-[${props.backgroundHEX}]`,
       `text-[${props.textHEX}]`,
       `border-[${props.borderHex}]`,
-      `text-[${props.font}px]`,
+      `text-${props.font}`,
       "focus:outline-none",
       "focus:ring-1",
       props.focusHEX ? `focus:ring-${props.focusHEX}` : "focus:ring-red-500",
@@ -73,7 +73,7 @@ const closeModal = () => {
 };
 </script>
 <template>
-  <div class="flex flex-col gap-2 mt-8">
+  <div class="flex flex-col gap-2 pt-8 w-full">
     <Button
       label="Exporter Tailwind CSS + HTML"
       size="small"
@@ -82,7 +82,7 @@ const closeModal = () => {
     />
 
     <button
-      class="bg-gray-700 border-none p-2 rounded-md text-[1rem] font-semibold cursor-pointer emibold text-white"
+      class="bg-gray-700 border-none p-2 rounded-md text-sm font-semibold cursor-pointer emibold text-white"
     >
       Reset settings
     </button>

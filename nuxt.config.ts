@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { Title } from '#build/components';
 import Lara from '@primevue/themes/lara';
 
 export default defineNuxtConfig({
@@ -7,7 +6,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   plugins: [
-    '~/plugins/prism.js', // Make sure this path is correct
+    '~/plugins/prism.js',
   ],
   head: {
     link: [
