@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  mode: 'jit',
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -7,6 +8,7 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./index.vue",
     "./error.vue",
+    "./nuxt.config.{js,ts}",
   ],
   theme: {
     extend: {
@@ -35,7 +37,27 @@ export default {
         'surface-800': 'rgb(var(--surface-800))',
         'surface-900': 'rgb(var(--surface-900))',
         'surface-950': 'rgb(var(--surface-950))'
-      } 
+      },
+       width: {
+        16: '4rem',
+        24: '6rem',
+        32: '8rem',
+        40: '10rem',
+        48: '12rem',
+        64: '16rem',
+        80: '20rem',
+        96: '24rem',
+      },
+      height: {
+        4: '1rem',
+        8: '2rem',
+        16: '4rem',
+        32: '8rem',
+        40: '10rem',
+        48: '12rem',
+        64: '16rem',
+        96: '24rem',
+      },
     },
   },
   plugins: [],

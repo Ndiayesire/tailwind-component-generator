@@ -3,8 +3,12 @@ import { Title } from '#build/components';
 import Lara from '@primevue/themes/lara';
 
 export default defineNuxtConfig({
+  
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  plugins: [
+    '~/plugins/prism.js', // Make sure this path is correct
+  ],
   head: {
     link: [
       {
@@ -29,4 +33,5 @@ export default defineNuxtConfig({
       inputVariant: 'filled',
     },
 }
+
 })

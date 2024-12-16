@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[url('/coming.jpg')] h-[55rem] w-full bg-cover items-center flex flex-col mx-auto justify-center"
+    class="bg-[url('/coming.jpg')] h-screen w-full bg-cover items-center flex flex-col mx-auto justify-center"
   >
     <ul class="circles">
       <li></li>

@@ -1,42 +1,49 @@
 <template>
   <div
-    class="flex items-center justify-between bg-white text-back w-full h-[4rem] px-4 py-2.5 border-b"
+    class="flex items-center justify-between bg-white text-back w-full h-[4rem] px-5 py-3 border-b fixed top-0 z-50"
   >
-    <div class="flex items-center gap-2 text-lg">
-      <img src="/dev.png" alt="Logo" class="h-[6rem]" />
-      <span class="text-semibold text-md font-semibold text-gray-600"
-        >Tailwind Component Generator</span
-      >
+    <div class="flex items-center gap-2 text-lg ml-72">
+      <img src="/post.png" alt="Logo" class="h-[1rem]" />
+      <span class="text-semibold text-md font-semibold text-gray-600">Tailwindcss</span>
     </div>
-    <div class="flex justify-between items-center">
-      <ul class="flex gap-8">
-        <li class="flex items-center gap-1">
-          <i class="pi pi-home"></i>
-          <NuxtLink to="/" class="text-gray-600 font-semibold">Home</NuxtLink>
-        </li>
-        <li class="flex items-center gap-2">
-          <i class="pi pi-th-large"></i>
-          <NuxtLink to="/Components" class="text-gray-600 font-semibold">
-            Components
-          </NuxtLink>
-        </li>
-        <li class="flex items-center gap-2">
-          <i class="pi pi-palette"></i>
-          <NuxtLink to="/ComingSoon" class="text-gray-600 font-semibold">
-            Forms Builder
-          </NuxtLink>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <Button
-        label="Contributions"
-        size="small"
-        class="border-[#34b08d]"
-        icon="pi pi-github"
-        outlined
-      />
+
+    <div class="flex gap-4 mr-72">
+      <div class="flex justify-between items-center">
+        <ul class="flex gap-8">
+          <li class="flex items-center gap-1">
+            <NuxtLink to="/" class="text-gray-600 font-semibold hover:text-primary-500"
+              >Docs</NuxtLink
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <NuxtLink
+              to="/Components"
+              class="text-gray-600 font-semibold hover:text-primary-500"
+            >
+              Components
+            </NuxtLink>
+          </li>
+          <li class="flex items-center gap-2 mr-5">
+            <NuxtLink
+              to="/ComingSoon"
+              class="text-gray-600 font-semibold hover:text-primary-500"
+            >
+              Forms Builder
+            </NuxtLink>
+          </li>
+        </ul>
+        <p class="text-gray-300">|</p>
+      </div>
+
+      <div class="flex gap-5 items-center">
+        <i
+          class="pi pi-github text-gray-300 text-lg hover:text-primary-500 cursor-pointer"
+        ></i>
+        <i
+          class="pi pi-moon text-gray-300 text-lg hover:text-primary-500 cursor-pointer"
+        ></i>
+      </div>
     </div>
   </div>
 </template>
-<script setup></script>
+<style></style>

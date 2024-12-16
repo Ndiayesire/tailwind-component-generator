@@ -2,7 +2,7 @@
 const search = ref("");
 </script>
 <template>
-  <div class="flex flex-col h-screen w-full p-8">
+  <div class="flex flex-col h-screen w-full p-8 bg-gray-50 mt-16">
     <div class="flex flex-col justify-center items-center mt-5">
       <h1
         class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-[#8aeec9]"
@@ -10,23 +10,27 @@ const search = ref("");
         Tailwind Generator
       </h1>
       <p
-        class="text-2xl mt-5 w-[47rem] text-center text-gray-600 tracking-normal leading-10"
+        class="text-xl mt-5 w-[47rem] text-center text-gray-600 tracking-normal leading-10"
       >
         Collection of useful tools and generators for Tailwind to create, design and
         customize all kind of web components using a graphical editor.
       </p>
     </div>
 
-    <div class="flex justify-center items-center space-x-4 mt-10">
-      <IconField>
-        <InputIcon class="pi pi-search" />
-        <InputText
+    <div class="flex justify-center items-center mt-10">
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Search"
           v-model="search"
-          placeholder="Search a component..."
-          class="w-[50rem] text-xs"
+          class="w-[50rem] h-12 pl-10 pr-3 py-2 rounded-lg border focus:outline-none text-sm text-gray-400"
         />
-      </IconField>
+        <i
+          class="pi pi-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+        ></i>
+      </div>
     </div>
+
     <ListComponents :searchQuery="search" />
   </div>
 </template>

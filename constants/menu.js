@@ -4,7 +4,7 @@ export const MENUS = [
       category: "category1",
       description: "A clickable button for actions.",
       image: "/post.png",
-      link: "/ButtonPreview",
+      link: "/component/button",
       icon: "👆🏼"
     },
     {
@@ -12,7 +12,7 @@ export const MENUS = [
       category: "category2",
       description: "An input field for user data.",
       image: "/post.png",
-      link: "/components/input",
+      link: "/component/input",
       icon: "🔌"
     },
     {

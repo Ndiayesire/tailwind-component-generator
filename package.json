@@ -17,6 +17,7 @@
     "nuxt": "^3.14.1592",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.4",
+    "prismjs": "^1.29.0",
     "vue": "latest",
     "vue-router": "latest"
   }
