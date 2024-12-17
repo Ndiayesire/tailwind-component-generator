@@ -2,9 +2,14 @@
   <div
     class="flex items-center justify-between bg-white text-back w-full h-[4rem] px-5 py-3 border-b fixed top-0 z-50"
   >
-    <div class="flex items-center gap-2 text-lg ml-0 md:ml-16 lg:ml-32">
-      <img src="/post.png" alt="Logo" class="h-[1rem]" />
-      <span class="text-semibold text-md font-semibold text-gray-600">Tailwindcss</span>
+    <div class="flex items-center gap-2 text-lg ml-0 md:ml-16 lg:ml-25">
+      <!-- <img src="/post.png" alt="Logo" class="h-[1rem]" /> -->
+      <NuxtLink
+        to="/"
+        class="text-semibold text-xm p-2 font-semibold rounded-lg text-[#10B981] cursor-pointer"
+      >
+        Tailwindcss Generator
+      </NuxtLink>
     </div>
     <div class="flex gap-4 ml-auto">
       <div class="flex justify-between items-center">

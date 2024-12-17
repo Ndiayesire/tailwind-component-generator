@@ -60,6 +60,20 @@ const exportCode = computed(() => {
       "focus:ring-opacity-50",
     ].join(" ");
     return `<input type="${props.selectedInputType}" placeholder="${props.placeholderText}" class="${inputClasses}" />`;
+  } else if (props.type === "card") {
+    const inputClasses = [
+      "cursor-pointer",
+      "border-2",
+      props.width ? `w-${props.width}` : "",
+      props.height ? `h-${props.height}` : "",
+      props.roundedCorners ? "rounded-lg" : "rounded-none",
+      `bg-[${props.backgroundHEX}]`,
+      `border-[${props.borderHex}]`,
+      props.shadow ? "shadow-xl" : "",
+      `hover:border-[${props.hoverHEX}]`,
+    ].join(" ");
+
+    return `<div class="${inputClasses}"> </div>`;
   }
   return "";
 });

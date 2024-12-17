@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode : false,
-  mode: 'jit', // Optional, can be removed if using Tailwind 3.0 or later
+  mode: 'jit', 
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",

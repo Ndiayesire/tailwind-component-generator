@@ -30,7 +30,7 @@ const filteredComponents = computed(() => {
       v-for="(component, index) in filteredComponents"
       :key="index"
       :to="component.link"
-      class="rounded-xl bg-white p-4 flex flex-col space-y-4 transition border hover:bg-gray-50 text-gray-600 cursor-pointer border-2 border-[#10B981] h-42"
+      class="rounded-xl bg-white p-4 flex flex-col space-y-4 transition hover:bg-gray-50 text-gray-600 cursor-pointer border-2 border-[#10B981] h-42"
     >
       <p class="text-2xl">{{ component.icon }}</p>
       <h2
